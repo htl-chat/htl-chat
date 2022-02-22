@@ -4,3 +4,7 @@
 @tailwind components;
 @tailwind base;
 @tailwind utilities;
+
+.container {
+    @apply max-w-header mx-6
+}
