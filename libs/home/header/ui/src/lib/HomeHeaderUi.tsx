@@ -13,6 +13,9 @@ export function HomeHeaderUi(props: HomeHeaderUiProps) {
       <nav className="max-w-header h-header flex justify-between items-center container text-white">
         <Link href="/">
           <div className="cursor-pointer flex gap-1.5 items-center">
+            <div className="w-7.5">
+              <Logo />
+            </div>
           </div>
         </Link>
       </nav>
