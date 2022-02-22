@@ -1,13 +1,16 @@
+import Link from 'next/link';
+
 import './HomeHeaderUi.module.css';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import { ReactComponent as Logo } from 'apps/home/public/logo.svg';
 
 /* eslint-disable-next-line */
 export interface HomeHeaderUiProps {}
 
 export function HomeHeaderUi(props: HomeHeaderUiProps) {
   return (
-    <div>
-      <h1>Welcome to HomeHeaderUi!</h1>
-    </div>
+    <header className="w-full fixed bottom-0 left-0 z-100 bg-primaryColor">
+    </header>
   );
 }
 
