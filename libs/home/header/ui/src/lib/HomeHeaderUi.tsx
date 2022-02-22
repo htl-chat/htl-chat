@@ -16,6 +16,10 @@ export function HomeHeaderUi(props: HomeHeaderUiProps) {
             <div className="w-7.5">
               <Logo />
             </div>
+            <div className="flex gap-1">
+              <h1 className="font-extrabold text-lg">htl.chat</h1>
+              <p className="text-xxs text-countryCode font-medium">AT</p>
+            </div>
           </div>
         </Link>
       </nav>
