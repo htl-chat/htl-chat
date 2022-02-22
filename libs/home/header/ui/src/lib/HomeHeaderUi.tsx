@@ -10,6 +10,8 @@ export interface HomeHeaderUiProps {}
 export function HomeHeaderUi(props: HomeHeaderUiProps) {
   return (
     <header className="w-full fixed bottom-0 left-0 z-100 bg-primaryColor">
+      <nav className="max-w-header h-header flex justify-between items-center container text-white">
+      </nav>
     </header>
   );
 }
