@@ -1,6 +1,19 @@
+// {
+//   "presets": [
+//     "@nrwl/next/babel",
+//   ],
+//   "plugins": []
+// }
+
 {
   "presets": [
-    "@nrwl/next/babel"
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@nrwl/next/babel"
   ],
-  "plugins": []
+  "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties"
+      ]
+  ]
 }
