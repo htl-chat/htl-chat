@@ -8,3 +8,9 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/home',
 };
+
+module.exports = {
+  moduleNameMapper: {
+    '\\.svg$': '<rootDir>/__mocks__/svg.js',
+  },
+};
