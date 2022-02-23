@@ -1,4 +1,9 @@
-import React from 'react';
+/**
+ * @jest-environment jsdom
+ */
+
+
+
 import { render } from '@testing-library/react';
 
 import Index from '../pages/index';
