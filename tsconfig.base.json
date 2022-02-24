@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@htl-chat/home/header/ui": ["libs/home/header/ui/src/index.ts"]
+      "@htl-chat/home/header/ui": ["libs/home/header/ui/src/index.ts"],
+      "@htl-chat/shared/search/ui": ["libs/shared/search/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
