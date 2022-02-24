@@ -18,7 +18,10 @@ module.exports = {
         'white': '#ffffff',
         'primaryColor': '#050F1E',
         'countryCode': '#989DA3',
-        'title-color': '#f1f2f3',
+        'titleColor': '#f1f2f3',
+        'searchBarBg': '#1C2534',
+        'searchBarBorder': '#27303E',
+        'searchBarText': '#8494AA',
       },
       maxWidth: {
         'header': '1200px',
