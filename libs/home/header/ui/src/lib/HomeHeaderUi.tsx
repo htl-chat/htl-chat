@@ -1,6 +1,7 @@
 import Link from 'next/link';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { ReactComponent as Logo } from 'apps/home/public/logo.svg';
+import NavMenu from './nav-menu/nav-menu';
 
 import './HomeHeaderUi.module.css';
 
@@ -22,7 +23,7 @@ export function HomeHeaderUi(props: HomeHeaderUiProps) {
             </div>
           </div>
         </Link>
-        <div className="fixed bottom-0 left-0 w-full bg-primaryColor pt-8 px-6 pb-16 drop-shadow-3xl rounded-t-3xl"></div>
+        <NavMenu />
       </nav>
     </header>
   );
