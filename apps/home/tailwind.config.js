@@ -18,6 +18,7 @@ module.exports = {
         'white': '#ffffff',
         'primaryColor': '#050F1E',
         'countryCode': '#989DA3',
+        'title-color': '#f1f2f3',
       },
       maxWidth: {
         'header': '1200px',
