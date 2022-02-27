@@ -2,7 +2,7 @@ import Link from 'next/link';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { ReactComponent as Logo } from 'apps/home/public/logo.svg';
 import NavMenu from './nav-menu/nav-menu';
-import { FiHome } from 'react-icons/fi';
+import { AiOutlineAppstore } from 'react-icons/ai';
 
 import './HomeHeaderUi.module.css';
 
@@ -24,14 +24,16 @@ export function HomeHeaderUi(props: HomeHeaderUiProps) {
             </div>
           </div>
         </Link>
-        <NavMenu />
-        <div className="flex items-center">
-          <div className="">
+        <div className="flex items-center cursor-pointer">
+          <Link href="/">
+            <div className="px-2.5 py-1 border-[1px] border-white rounded-3xl text-sm font-semibold mr-3">
             Open Chat
           </div>
-          <FiHome />
+          </Link>
+          <AiOutlineAppstore className="text-xl" />
         </div>
       </nav>
+      <NavMenu />
     </header>
   );
 }
