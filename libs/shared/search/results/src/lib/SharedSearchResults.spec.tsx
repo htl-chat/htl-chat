@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import SharedSearchResults from './shared-search-results';
+import SharedSearchResults from './SharedSearchResults';
 
 describe('SharedSearchResults', () => {
   it('should render successfully', () => {

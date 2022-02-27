@@ -1,11 +1,11 @@
 import { FiSearch, FiCommand } from 'react-icons/fi';
 
-import './SharedSearchUi.module.css';
+import './SharedSearchButton.module.css';
 
 /* eslint-disable-next-line */
-export interface SharedSearchUiProps {}
+export interface SharedSearchButtonProps {}
 
-export function SharedSearchUi(props: SharedSearchUiProps) {
+export function SharedSearchButton(props: SharedSearchButtonProps) {
   return (
     <button className="bg-searchBarBg border-searchBarBorder border-2 pl-4 py-1 pr-2 rounded-xl cursor-pointer w-full">
       <div className="flex justify-between text-searchBarText">
@@ -26,4 +26,4 @@ export function SharedSearchUi(props: SharedSearchUiProps) {
   );
 }
 
-export default SharedSearchUi;
+export default SharedSearchButton;

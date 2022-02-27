@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FaCircleNotch } from 'react-icons/fa';
 import { HiOutlineSupport } from 'react-icons/hi';
 import { IoMdCheckmarkCircleOutline, IoMdClose } from 'react-icons/io';
-import { SharedSearchUi } from '@htl-chat/shared/search/ui';
+import { SharedSearchButton } from '@htl-chat/shared/search/button';
 
 import './nav-menu.module.css';
 
@@ -40,7 +40,7 @@ export function NavMenu(props: NavMenuProps) {
       </ul>
       <div className="flex justify-between items-center">
         <div className="w-[80%] ml-3">
-          <SharedSearchUi />
+          <SharedSearchButton />
         </div>
         <IoMdClose className="text-2xl cursor-pointer text-titleColor mr-1" />
       </div>

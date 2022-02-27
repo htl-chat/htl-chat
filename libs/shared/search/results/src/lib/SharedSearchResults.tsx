@@ -1,4 +1,4 @@
-import './shared-search-results.module.css';
+import './SharedSearchResults.module.css';
 
 /* eslint-disable-next-line */
 export interface SharedSearchResultsProps {}

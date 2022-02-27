@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared/search/button",
+  "sourceRoot": "libs/shared/search/button/src",
+  "projectType": "library",
+  "tags": ["search", "button", "lib"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/search/button/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/search/button"],
+      "options": {
+        "jestConfig": "libs/shared/search/button/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -16,7 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "@htl-chat/home/header/ui": ["libs/home/header/ui/src/index.ts"],
-      "@htl-chat/shared/search/ui": ["libs/shared/search/ui/src/index.ts"]
+      "@htl-chat/shared/search/button": [
+        "libs/shared/search/button/src/index.ts"
+      ],
+      "@htl-chat/shared/search/results": [
+        "libs/shared/search/results/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
