@@ -42,7 +42,7 @@ export function NavMenu(props: NavMenuProps) {
         <div className="w-[80%] ml-3">
           <SharedSearchUi />
         </div>
-        <IoMdClose className="text-2xl cursor-pointer text-title-color mr-1" />
+        <IoMdClose className="text-2xl cursor-pointer text-titleColor mr-1" />
       </div>
     </div>
   );
