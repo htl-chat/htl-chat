@@ -12,9 +12,7 @@ export function Index() {
           isSearchOpen={isSearchOpen}
           setIsSearchOpen={setIsSearchOpen}
         />
-        <HomeHeaderUi
-          setIsSearchOpen={setIsSearchOpen}
-        />
+        <HomeHeaderUi setIsSearchOpen={setIsSearchOpen} />
       </main>
     </Fragment>
   );
