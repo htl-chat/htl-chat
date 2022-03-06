@@ -155,6 +155,7 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
                 {filteredProjects.map((project) => (
                   <Combobox.Option
                     key={project.id}
+                    // Used for the Combobox onChange
                     value={project}
                     className={({ active }) =>
                       `flex gap-1 disable-ring items-center text-titleColor cursor-default leading-7 pl-1.5 ${
