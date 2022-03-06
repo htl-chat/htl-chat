@@ -19,7 +19,6 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
   const [query, setQuery] = useState<any>('');
   const router = useRouter();
 
-  const showModal: boolean = isSearchOpen ? true : false;
 
   const projects = [
     {
@@ -92,7 +91,7 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
     : [];
 
   return (
-    <Transition show={showModal} as={Fragment}>
+    <Transition show={isSearchOpen} as={Fragment}>
       <Dialog
         as="div"
         className="fixed inset-0 z-10 pt-[35vh] overflow-y-auto"
