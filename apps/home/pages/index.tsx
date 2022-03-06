@@ -1,16 +1,21 @@
 import { HomeHeaderUi } from '@htl-chat/home/header/ui';
-import { Fragment } from 'react';
+import { SharedSearchResults } from '@htl-chat/shared/search/results';
+import { Fragment, useState } from 'react';
 import styles from './index.module.css';
 
 export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
+  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);
   return (
     <Fragment>
-      <HomeHeaderUi />
+      <main className="bg-primaryColor w-screen h-screen">
+        <SharedSearchResults
+          isSearchOpen={isSearchOpen}
+          setIsSearchOpen={setIsSearchOpen}
+        />
+        <HomeHeaderUi
+          setIsSearchOpen={setIsSearchOpen}
+        />
+      </main>
     </Fragment>
   );
 }
