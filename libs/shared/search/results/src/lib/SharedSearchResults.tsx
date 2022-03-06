@@ -14,7 +14,6 @@ export interface SharedSearchResultsProps {
 
 export function SharedSearchResults(props: SharedSearchResultsProps) {
   const { isSearchOpen, setIsSearchOpen } = props;
-  // const [isSearchOpen, setIsSearchOpen] = useState<any>(true);
   const focusRef = useRef(null);
   const [query, setQuery] = useState<any>('');
   const router = useRouter();
@@ -81,7 +80,6 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
       link: '/project/10',
     },
   ];
-  const [selected, setSelected] = useState(projects[0]);
 
   useEffect(() => {
     function onKeyDown(event: any) {
@@ -93,7 +91,7 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
     return () => {
       window.removeEventListener('keydown', onKeyDown);
     };
-  }, []);
+  }, [isSearchOpen]);
 
   const filteredProjects = query
     ? projects.filter((project) =>
@@ -152,9 +150,7 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
                 <Combobox.Input
                   className="h-12 w-full border-0 bg-transparent text-titleColor placeholder-gray-400 disable-ring"
                   placeholder="Spotlight Search"
-                  onChange={(event) => {
-                    setQuery(event.target.value);
-                  }}
+                  onChange={(event) => setQuery(event.target.value)}
                 />
               </div>
 
@@ -197,78 +193,6 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
         </Transition.Child>
       </Dialog>
     </Transition>
-
-    //  <Dialog
-    //   open={isSearchOpen}
-    //   as="div"
-    //   className="fixed inset-0 z-10 pt-[35vh] overflow-y-auto"
-    //   onClose={setIsSearchOpen}
-    //   initialFocus={completeButtonRef}
-    // >
-    //   <div className="px-4 text-center">
-    //     {/* Used to darker the whole screen */}
-    //     <Dialog.Overlay className="fixed inset-0" />
-
-    //     {/* This element is to trick the browser into centering the modal contents. */}
-    //     {/* <span className="inline-block h-screen align-middle" aria-hidden="true">
-    //       &#8203;
-    //     </span> */}
-    //     <Combobox
-    //       value={projects}
-    //       onChange={(project) => {
-    //         setIsSearchOpen(false);
-    //         router.push(project.link);
-    //       }}
-    //       as="div"
-    //       className="relative max-w-md mx-auto rounded-xl backdrop-blur-md shadow-xl bg-[#bfb4c728] shadow-black/30 ring-[0.5px] ring-[#4E4D47] ring-opacity-30"
-    //     >
-    //       <div className="flex gap-2 items-center pl-4" ref={completeButtonRef}>
-    //         <FiSearch className="text-gray-400 text-lg" />
-    //         <Combobox.Input
-    //           className="h-12 w-full border-0 bg-transparent text-titleColor placeholder-gray-400 disable-ring"
-    //           placeholder="Spotlight Search"
-    //           onChange={(event) => {
-    //             setQuery(event.target.value);
-    //           }}
-    //         />
-    //       </div>
-
-    //       <Combobox.Options
-    //         static
-    //         className="text-sm text-left max-h-40 w-full overflow-y-auto px-3"
-    //       >
-    //         {filteredProjects.map((project) => (
-    //           <Combobox.Option
-    //             key={project.id}
-    //             value={project}
-    //             className={({ active }) =>
-    //               `flex gap-1 disable-ring items-center text-titleColor cursor-default leading-7 pl-1.5 ${
-    //                 active ? 'bg-sky-600 rounded-lg' : ''
-    //               }`
-    //             }
-    //           >
-    //             {({ active }) => (
-    //               <Fragment>
-    //                 <IoSearchCircle className="text-gray-400" />
-    //                 {project.title}
-    //               </Fragment>
-    //             )}
-    //           </Combobox.Option>
-    //         ))}
-    //         {query && filteredProjects.length === 0 && (
-    //           <Combobox.Option
-    //             className="px-3 pb-3 text-titleColor flex gap-1"
-    //             key="noCookies"
-    //             value="No results found"
-    //           >
-    //             <p>There are no cookies left</p>
-    //             <span>🍪</span>
-    //           </Combobox.Option>
-    //         )}
-    //       </Combobox.Options>
-    //     </Combobox>
-    //   </div>
-    // </Dialog>
   );
 }
 
