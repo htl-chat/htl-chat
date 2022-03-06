@@ -1,4 +1,4 @@
-import { Fragment, useState, useRef } from 'react';
+import { Fragment, useState, useRef, useEffect } from 'react';
 import { Dialog, Transition, Combobox, FocusTrap } from '@headlessui/react';
 import { FiSearch } from 'react-icons/fi';
 import { IoSearchCircle } from 'react-icons/io5';
@@ -18,7 +18,6 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
   const focusRef = useRef(null);
   const [query, setQuery] = useState<any>('');
   const router = useRouter();
-
 
   const projects = [
     {
@@ -83,6 +82,18 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
     },
   ];
   const [selected, setSelected] = useState(projects[0]);
+
+  useEffect(() => {
+    function onKeyDown(event: any) {
+      if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        setIsSearchOpen(!isSearchOpen);
+      }
+    }
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, []);
 
   const filteredProjects = query
     ? projects.filter((project) =>
