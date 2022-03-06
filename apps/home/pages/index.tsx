@@ -1,6 +1,6 @@
+import { Fragment, useState } from 'react';
 import { HomeHeaderUi } from '@htl-chat/home/header/ui';
 import { SharedSearchResults } from '@htl-chat/shared/search/results';
-import { Fragment, useState } from 'react';
 import styles from './index.module.css';
 
 export function Index() {
