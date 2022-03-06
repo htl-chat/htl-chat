@@ -6,7 +6,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to home!</title>
+        <title>htl.chat - A place to ...</title>
       </Head>
       <main className="app">
         <Component {...pageProps} />
