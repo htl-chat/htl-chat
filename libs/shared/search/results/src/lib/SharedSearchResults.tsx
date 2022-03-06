@@ -132,7 +132,7 @@ export function SharedSearchResults(props: SharedSearchResultsProps) {
               value={projects}
               onChange={(project) => {
                 setIsSearchOpen(false);
-                router.push(project.link);
+                router.push(`${project.link}`);
               }}
               as="div"
               className="relative max-w-md mx-auto rounded-xl backdrop-blur-md shadow-xl bg-[#bfb4c728] shadow-black/30 ring-[0.5px] ring-[#4E4D47] ring-opacity-30"
