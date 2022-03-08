@@ -7,14 +7,13 @@ import styles from './index.module.css';
 export function Index() {
   const [isSearchOpen, setIsSearchOpen] = useState<any>(false);
   return (
-    <Fragment>
+    <HomeMain>
       <HomeHeaderUi setIsSearchOpen={setIsSearchOpen} />
       <SharedSearchResults
         isSearchOpen={isSearchOpen}
         setIsSearchOpen={setIsSearchOpen}
       />
-      <HomeMain />
-    </Fragment>
+    </HomeMain>
   );
 }
 
