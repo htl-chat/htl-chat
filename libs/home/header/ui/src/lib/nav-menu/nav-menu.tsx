@@ -26,7 +26,7 @@ export function NavMenu(props: NavMenuProps) {
     <Transition appear show={navMenuOpen} as={Fragment}>
       <Dialog
         as="div"
-        className="fixed bottom-0 left-0 w-full bg-primaryColor pt-8 px-6 pb-5 drop-shadow-3xl rounded-t-2xl"
+        className="fixed bottom-0 left-0 w-full bg-primaryColor pt-8 px-6 pb-5 drop-shadow-3xl rounded-t-2xl z-50"
         onClose={closeModal}
       >
         <Transition.Child
