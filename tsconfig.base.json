@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@htl-chat/earth": ["libs/home/earth/ui/src/index.ts"],
+      "@htl-chat/earth": ["libs/home/earth/renderer/src/index.ts"],
+      "@htl-chat/earth-ui": ["libs/home/earth/ui/src/index.ts"],
       "@htl-chat/home/header/ui": ["libs/home/header/ui/src/index.ts"],
       "@htl-chat/home/main": ["libs/home/main/src/index.ts"],
       "@htl-chat/home/section1/ui": ["libs/home/section1/ui/src/index.ts"],
