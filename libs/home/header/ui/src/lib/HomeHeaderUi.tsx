@@ -17,7 +17,7 @@ export function HomeHeaderUi(props: HomeHeaderUiProps) {
   const [navMenuOpen, setNavMenuOpen] = useState(false);
 
   return (
-    <header className="w-full fixed bottom-0 left-0 z-1000 bg-primaryColor">
+    <header className="fixed w-full bottom-0 left-0 z-40 bg-primaryColor">
       <nav className="max-w-header ml-6 mr-5 h-header flex justify-between items-center text-white">
         <Link href="/">
           <div className="cursor-pointer flex gap-1.5 items-center">

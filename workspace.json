@@ -3,6 +3,49 @@
   "projects": {
     "home": "apps/home",
     "home-e2e": "apps/home-e2e",
+    "home-earth-ui": {
+      "root": "libs/home/earth/ui",
+      "sourceRoot": "libs/home/earth/ui/src",
+      "projectType": "library",
+      "tags": [],
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:rollup",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/home/earth/ui",
+            "tsConfig": "libs/home/earth/ui/tsconfig.lib.json",
+            "project": "libs/home/earth/ui/package.json",
+            "entryFile": "libs/home/earth/ui/src/index.ts",
+            "external": ["react/jsx-runtime"],
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "compiler": "babel",
+            "assets": [
+              {
+                "glob": "libs/home/earth/ui/README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/home/earth/ui/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/home/earth/ui"],
+          "options": {
+            "jestConfig": "libs/home/earth/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "home-header-ui": "libs/home/header/ui",
     "home-main": {
       "root": "libs/home/main",
