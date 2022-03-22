@@ -1,7 +1,7 @@
 import './HomeSection1Ui.module.css';
 import { Fragment } from 'react';
 import { ReactComponent as HeroGlow } from '../assets/hero-glow.svg';
-import { HomeEarthUi } from '@htl-chat/earth';
+import { HomeEarthRenderer } from '@htl-chat/earth';
 
 /* eslint-disable-next-line */
 export interface HomeSection1UiProps {}
@@ -22,7 +22,7 @@ export function HomeSection1Ui(props: HomeSection1UiProps) {
         Connect with other Students
       </h2>
       <div className="relative top-12">
-        <HomeEarthUi />
+        <HomeEarthRenderer />
       </div>
     </Fragment>
   );
